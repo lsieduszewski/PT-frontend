@@ -1,24 +1,17 @@
 <div>
     <table class="table">
         <tr>
-            <th>Id:</th>
-            <th>Nazwa książki</th>
-            <th>Wydawnictwo</th>
-            <th></th>
-        </tr>
-        <tr ng-repeat="book in model.books">
-            <td>{{book.id}}</td>
-            <td>{{book.name}}</td>
-            <td>{{book.publishingHouse}}</td>
+            <th>Id</th>
+            <th>Is Male</th>
+            <th>Surname</th>
+            <th>WydName</th>
 
-            <td>
-                <a class="btn btn-default" ng-link="['Details', { id:book.id }, 'Overview']">
-                    <span class="glyphicon glyphicon-zoom-in"></span>
-                </a>
-                <button class="btn btn-default" ng-click="model.goTo(book.id)">
-                    <span class="glyphicon glyphicon-zoom-in"></span>
-                </button>
-            </td>
+        </tr>
+        <tr ng-repeat="dancer in model.dancers">
+            <td>{{dancer.id}}</td>
+            <td>{{dancer.isMale}}</td>
+            <td>{{dancer.surname}}</td>
+            <td>{{dancer.name}}</td>
         </tr>
     </table>
     <div>
