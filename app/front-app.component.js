@@ -6,16 +6,16 @@
     module.component("frontApp", {
         templateUrl: "/app/front-app.component.html",
         $routeConfig: [
-            { path: "/list", component:"bookList", name: "List" },
-            { path: "/create", component:"bookCreate", name: "Create" },
-            { path: "/about", component: "about", name: "About" },
-            { path: "/details/:id/...", component: "bookDetails", name:"Details" },
-            { path: "/**", redirectTo: ["List", ""] }
+            { path: "/list", component:"dancerList", name: "DancerList" },
+            { path: "/createDancer", component:"createDancer", name: "CreateDancer" },
+            { path: "/about", component:"about", name: "About" },
+
+            { path: "/**", redirectTo: ["DancerList", ""] }
         ]
     });
 
     module.component("about", {
-       template: "About us ..."
+       template: "Program stworzony przez Lukasza Sieduszewskiego </br> e-mail: lsieduszewski@gmail.com, tel. 000 000 000"
     });
 
 }());

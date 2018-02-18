@@ -2,14 +2,19 @@
     <table class="table">
         <tr>
             <th>Id</th>
-            <th>Is Male</th>
+            <th>Sex</th>
             <th>Surname</th>
-            <th>WydName</th>
+            <th>Name</th>
 
         </tr>
         <tr ng-repeat="dancer in model.dancers">
             <td>{{dancer.id}}</td>
-            <td>{{dancer.isMale}}</td>
+            <td>
+                <div ng-switch="dancer.male">
+                <div ng-switch-when="true">Male</div>
+                <div ng-switch-default>Female</div>
+                </div>
+            </td>
             <td>{{dancer.surname}}</td>
             <td>{{dancer.name}}</td>
         </tr>
@@ -20,10 +25,7 @@
 
     <accordion>
         <accordion-panel heading="Panel 1">
-                This is the body for panel 1
-        </accordion-panel>
-        <accordion-panel heading="Panel 2">
-                This is the body for panel 2
+            This is the body for panel 1
         </accordion-panel>
     </accordion>
 
