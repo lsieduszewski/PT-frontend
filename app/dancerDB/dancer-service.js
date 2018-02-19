@@ -8,10 +8,12 @@
     function dancerService(commonService) {
 
         var URL = "http://localhost:8080/dancers/";
+        var URL2 = "http://localhost:8080/couples/";
 
         return {
             getdancers: getdancers,
             createDancer: createDancer,
+            createCouple: createCouple,
 //            getBookDetails: getBookDetails
         };
 
@@ -32,6 +34,17 @@
                 return result ? result : [];
             });
         }
+
+        function createCouple(couple) {
+                    var url = URL2 + "addCouple";
+                    var errorMsg = "blad przy addCouple";
+                    var successMsg = "sukces przy addCouple";
+                    return commonService.post(url, couple, successMsg, errorMsg).then(function (result) {
+                        return result ? result : [];
+                    });
+                }
+
+
 //
 //        function getBookDetails(id) {
 //            var url = URL + "getBookDetails/" + id;
