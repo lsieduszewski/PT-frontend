@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("app.dancerDB")
+    angular.module("app.centralDB")
         .factory("dancerService", dancerService);
 
     dancerService.$inject = ["commonService"];
@@ -9,11 +9,14 @@
 
         var URL = "http://localhost:8080/dancers/";
         var URL2 = "http://localhost:8080/couples/";
+        var URL3 = "http://localhost:8080/clubs/";
 
         return {
             getdancers: getdancers,
             createDancer: createDancer,
             createCouple: createCouple,
+            getcouples: getcouples,
+            getclubs: getclubs,
 //            getBookDetails: getBookDetails
         };
 
@@ -43,6 +46,24 @@
                         return result ? result : [];
                     });
                 }
+
+        function getcouples() {
+                    var url = URL2 + "findAll";
+                    var errorMsg = "blad przy get couples";
+                    var successMsg = "sukces przy get couples";
+                    return commonService.get(url, successMsg, errorMsg).then(function (result) {
+                        return result ? result : [];
+                    });
+                }
+
+        function getclubs() {
+                            var url = URL3 + "findAll";
+                            var errorMsg = "blad przy get clubs";
+                            var successMsg = "sukces przy get clubs";
+                            return commonService.get(url, successMsg, errorMsg).then(function (result) {
+                                return result ? result : [];
+                            });
+                        }
 
 
 //

@@ -8,6 +8,7 @@
         $routeConfig: [
             { path: "/list", component:"dancerList", name: "DancerList" },
             { path: "/createDancer", component:"createDancer", name: "CreateDancer" },
+            { path: "/coupleList", component:"coupleList", name: "CoupleList" },
             { path: "/createCouple", component:"createCouple", name: "CreateCouple" },
             { path: "/about", component:"about", name: "About" },
             { path: "/**", redirectTo: ["DancerList", ""] }

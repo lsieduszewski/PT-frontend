@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    var module = angular.module("app.dancerDB");
+    var module = angular.module("app.centralDB");
 
     function fetchBooks(dancerService) {
         return dancerService.getdancers();
@@ -23,7 +23,7 @@
         bindings: {
             "$router": "<"
         },
-        templateUrl: "/app/dancerDB/dancer-list.component.html",
+        templateUrl: "/app/centralDB/dancer-list.component.html",
         controllerAs: "model",
         controller: ["dancerService", controller]
     });

@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    var module = angular.module("app.dancerDB");
+    var module = angular.module("app.centralDB");
 
     function createNewDancer(dancerService, dancerToCreate) {
             return dancerService.createDancer(dancerToCreate);
@@ -33,7 +33,7 @@
         bindings: {
             "$router": "<"
         },
-        templateUrl: "/app/dancerDB/dancer-create.component.html",
+        templateUrl: "/app/centralDB/dancer-create.component.html",
         controllerAs: "model",
         controller: ["dancerService", controller]
     });

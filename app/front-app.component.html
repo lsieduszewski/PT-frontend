@@ -1,13 +1,30 @@
 <nav class="navbar navbar-default navbar-inverse" class="container-fluid">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#/list">Test program for dance tournament</a>
+            <a class="navbar-brand" href="#/list" style="color:silver">Test program for dance tournament</a>
         </div>
         <ul class="nav navbar-nav navbar-left">
-            <li><a ng-link="['DancerList']">Dancer List</a></li>
-            <li><a ng-link="['CreateDancer']">Create Dancer</a></li>
-            <li><a ng-link="['CreateCouple']">Create Couple</a></li>
-            <li><a ng-link="['About']">About</a></li>
+            <li>
+                <table style="width:150%" border="1px solid black" >
+                <tr align="center" style="color:silver">
+                    <td colspan="2"><b>Dancer</b></td>
+                    <td colspan="2"><b>Couple</b></td>
+                    <td colspan="2"><b>Club(nie działa)</b></td>
+                    <td colspan="2"><b>Judge(też jeszcze nie :) )</b></td>
+                    <td rowspan="2"><a ng-link="['About']">About</a></td>
+                </tr>
+                <tr align="center">
+                    <td ><a ng-link="['DancerList']">List</a></td>
+                    <td><a ng-link="['CreateDancer']">Create</a></td>
+                    <td><a ng-link="['CoupleList']">List</a></td>
+                    <td><a ng-link="['CreateCouple']">Create</a></td>
+                    <td><a>List</a></td>
+                    <td><a>Create</a></td>
+                    <td><a>List</a></td>
+                    <td><a>Create</a></td>
+
+                </tr>
+                </table>
         </ul>
     </div>
 </nav>
