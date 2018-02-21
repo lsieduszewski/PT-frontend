@@ -10,6 +10,10 @@
             { path: "/createDancer", component:"createDancer", name: "CreateDancer" },
             { path: "/coupleList", component:"coupleList", name: "CoupleList" },
             { path: "/createCouple", component:"createCouple", name: "CreateCouple" },
+            { path: "/clubList", component:"clubList", name: "ClubList" },
+            { path: "/createClub", component:"createClub", name: "CreateClub" },
+            { path: "/judgeList", component:"judgeList", name: "JudgeList" },
+            { path: "/createJudge", component:"createJudge", name: "CreateJudge" },
             { path: "/about", component:"about", name: "About" },
             { path: "/**", redirectTo: ["DancerList", ""] }
         ]

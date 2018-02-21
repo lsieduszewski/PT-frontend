@@ -10,6 +10,7 @@
         var URL = "http://localhost:8080/dancers/";
         var URL2 = "http://localhost:8080/couples/";
         var URL3 = "http://localhost:8080/clubs/";
+        var URL4 = "http://localhost:8080/judges/";
 
         return {
             getdancers: getdancers,
@@ -17,7 +18,9 @@
             createCouple: createCouple,
             getcouples: getcouples,
             getclubs: getclubs,
-//            getBookDetails: getBookDetails
+            createClub: createClub,
+            getjudges: getjudges,
+            createJudge: createJudge,
         };
 
         function getdancers() {
@@ -64,6 +67,33 @@
                                 return result ? result : [];
                             });
                         }
+
+         function createClub(club) {
+                            var url = URL3 + "addClub";
+                            var errorMsg = "blad przy addClub";
+                            var successMsg = "sukces przy addClub";
+                            return commonService.post(url, club, successMsg, errorMsg).then(function (result) {
+                                return result ? result : [];
+                            });
+                        }
+
+                function getjudges() {
+                                    var url = URL4 + "findAll";
+                                    var errorMsg = "blad przy get judges";
+                                    var successMsg = "sukces przy get judges";
+                                    return commonService.get(url, successMsg, errorMsg).then(function (result) {
+                                        return result ? result : [];
+                                    });
+                                }
+
+                 function createJudge(judge) {
+                                    var url = URL4 + "addJudge";
+                                    var errorMsg = "blad przy addJudge";
+                                    var successMsg = "sukces przy addJudge";
+                                    return commonService.post(url, judge, successMsg, errorMsg).then(function (result) {
+                                        return result ? result : [];
+                                    });
+                                }
 
 
 //
