@@ -6,8 +6,8 @@
     module.component("frontApp.tournament", {
         templateUrl: "/app/tournament.component.html",
         $routeConfig: [
-//            { path: "/list", component:"dancerList", name: "DancerList" },
-//            { path: "/createDancer", component:"createDancer", name: "CreateDancer" },
+            { path: "/tournamentJudgeList", component:"tournamentJudgeList", name: "TournamentJudgeList" },
+            { path: "/createTournamentJudge", component:"createTournamentJudge", name: "CreateTournamentJudge" },
 //            { path: "/coupleList", component:"coupleList", name: "CoupleList" },
 //            { path: "/createCouple", component:"createCouple", name: "CreateCouple" },
 //            { path: "/clubList", component:"clubList", name: "ClubList" },
@@ -19,8 +19,5 @@
         ]
     });
 
-    module.component("about", {
-       template: "Program stworzony przez Lukasza Sieduszewskiego </br> e-mail: lsieduszewski@gmail.com, tel. 000 000 000"
-    });
 
 }());
