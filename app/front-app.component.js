@@ -10,6 +10,7 @@
             { path: "/", component:"aboutme", name: "Aboutme" },
             { path: "/centralDB", component:"frontApp.centralDB", name: "CentralDB" },
             { path: "/tournament", component:"frontApp.tournament", name: "Tournament" },
+
 //            { path: "/**", redirectTo: ["Aboutme", ""] }
         ]
     });
